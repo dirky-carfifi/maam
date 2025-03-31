@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ma’am</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="2.png">
+    <!-- Internal CSS for the loading screen -->
+    <style>
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+        }
+
+        .loading-face {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #loading-screen h1 {
+            font-size: 40px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Great Vibes', cursive;
+            color: #01579b;
+        }
+
+        #loading-screen p {
+            font-size: 10px;
+            margin-bottom: 15px;
+            line-height: 0.5;
+            font-family: 'Playfair Display', serif;
+            color: #01579b;
+        }
+    </style>
+</head>
+<body class="celebration-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img src="2.png" alt="Loading..." class="loading-face">
+        <h1>Loading...</h1>
+        <p>PANGIT PO KASI INTERNET NIYO.</p>
+    </div>
+
+    <div class="container" style="display: none;" id="main-content">
+        <h1>You will be missed, Ma'am Jossa! 🕊️</h1>
+        <p>iyak ka muna ma'am bago mo basahin para mala MMK</p>
+        <div class="photo-frame glow-frame">
+            <img src="2.png" alt="Teacher's Photo">
+        </div>
+        <button id="play-music-button" class="glow-button">I-tap mo po muna 'to for music at para ganap na ganap 🕊️</button>
+        
+        <h1>Dear ma'am Jossa,</h1>
+
+        <p> On behalf of the class officials and the entire 11- Gates, we would like to express our deepest gratitude for your unwavering guidance, patience, and support. Your dedication to helping us navigate challenges and celebrate successes has made a significant impact on our growth, both academically and personally. </p>
+            
+        <p> We truly appreciate the time and effort you invest in mentoring us, and we are fortunate to have someone as caring and knowledgeable as you guiding our class. Please know that your hard work does not go unnoticed, and we are committed to making you proud.</p>
+            
+        <p> Thank you for being an incredible adviser and role model. If there’s anything we can do to support you or the class better, please don’t hesitate to let us know.</p>
+        
+        <p>Sincerely, James. Class President <br>On behalf of 11-Gates</p>
+       
+        <!-- Photo Gallery Section -->        
+        <div class="outline">
+            <h2 class="message">Ma'am Josa with Gates</h2>
+            <div class="gallery">
+                <!-- 10 Frames for Pictures -->
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="2.png" alt="Photo 1">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="3.jpg" alt="Photo 2">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="4.jpg" alt="Photo 3">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="5.jpg" alt="Photo 4">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="6.jpg" alt="Photo 5">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="7.jpg" alt="Photo 6">
+                </div>  
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="8.JPG" alt="Photo 6">
+                </div>
+            </div>
+
+            <!-- Expanded Gallery View (Hidden by default) -->
+            <div id="expanded-gallery" class="expanded-gallery" onclick="closeGallery()">
+                <span class="close">&times;</span>
+                <div class="expanded-content">
+                    <!-- Additional Images for the Expanded View -->
+                    <img src="2.png" alt="Expanded Photo 1">
+                    <img src="3.jpg" alt="Expanded Photo 2">
+                    <img src="4.jpg" alt="Expanded Photo 3">
+                    <img src="5.jpg" alt="Expanded Photo 4">
+                    <img src="6.jpg" alt="Expanded Photo 5">
+                    <img src="7.jpg" alt="Expanded Photo 6">
+                    <img src="8.JPG" alt="Expanded Photo 6">
+                </div>
+            </div>
+        </div>
+        
+        <p class="message">We deeply appreciate everything you’ve done for us. You make the world a better place with your kindness, wisdom, and unwavering support. Here's to more years of teaching and inspiring future generations!</p>
+        
+        <!-- Gifts Section -->
+        <div class="outline">
+            <h2 class="message">MGA GIFTS KO PO PALA SA'YO MA'AM💙:</h2>
+            <p>pictures nalang po muna, wala pang budget eh HAHAHAHA</p>
+            <div class="gallery">
+                <!-- Frames for Gift Pictures -->
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="printer.jpg" alt="Printer">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="bondpaper.jpg" alt="Bond Paper">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="laptop.jpg" alt="Laptop">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="cake.jpg" alt="Cake">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="manok.jpg" alt="Manok">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="milktea.jpg" alt="Milk Tea">
+                </div>
+            </div>            
+
+            <!-- Expanded Gallery View for Gifts (Hidden by default) -->
+            <div id="expanded-gift-gallery" class="expanded-gallery" onclick="closeGallery('gift')">
+                <span class="close">&times;</span>
+                <div class="expanded-content">
+                    <!-- Additional Images for the Expanded Gift View -->
+                    <img src="printer.jpg" alt="Expanded Printer">
+                    <img src="bondpaper.jpg" alt="Expanded Bond Paper">
+                    <img src="laptop.jpg" alt="Expanded Laptop">
+                    <img src="cake.jpg" alt="Expanded Cake">
+                    <img src="manok.jpg" alt="Expanded Manok">
+                    <img src="milktea.jpg" alt="Expanded Milk Tea">      
+                </div>
+            </div>
+        </div>
+        
+        <div class="outline">
+            <h2 class="message">Message of 11-Gates 💙:</h2>
+            <p>Scan mo yung Qr ma'am </p>
+            <div class="gallery">
+                <!-- Frames for Gift Pictures -->
+                <div class="gallery-frame" onclick="expandGallery(this, 'Qr')">
+                    <img src="qr.jpeg" alt="Printer">
+                </div>
+           </div>            
+        </div>
+        
+ <p class="message">Mahal ka po namin ma'am! Thank you for being an incredible teacher! Have a wonderful journey 💙</p>
+        
+        
+        <div id="expanded-qr-gallery" class="expanded-gallery" onclick="closeGallery('Qr')">
+                <span class="close">&times;</span>
+                <div class="expanded-content">
+                    <!-- Additional Images for the Expanded Gift View -->
+                    <img src="qr.jpeg" alt="Expanded Printer">
+      
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <footer>
+        <p>Created by Dirky | Greetings from 11-Gates</p>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        // Function to expand the gallery
+        function expandGallery(element, type) {
+            const expandedGallery = type === 'gift' ? document.getElementById('expanded-gift-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "flex";
+        }
+
+        // Function to close the gallery
+        function closeGallery(type) {
+            const expandedGallery = type === 'gift' ? document.getElementById('expanded-gift-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "none";
+        }
+        
+        
+        // Function to expand the gallery
+        function expandGallery(element, type) {
+            const expandedGallery = type === 'Qr' ? document.getElementById('expanded-qr-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "flex";
+        }
+
+        // Function to close the gallery
+        function closeGallery(type) {
+            const expandedGallery = type === 'Qr' ? document.getElementById('expanded-qr-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "none";
+        }
+        
+
+
+        // Function to play background music
+        document.getElementById('play-music-button').addEventListener('click', function() {
+            const music = document.getElementById('background-music');
+            music.play();
+        });
+
+        // Hide the main content initially and then display it after a delay
+        window.onload = function() {
+            // Hide loading screen after 2 seconds
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block'; // Show main content
+            }, 2000); // Change the delay time as needed
+        };
+    </script>
+</body>
+    </html>
