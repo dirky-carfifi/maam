@@ -168,6 +168,35 @@
             </div>
         </div>
 
+        <div class="outline">
+            <h2 class="message">Message of 11-Gates 💙:</h2>
+            <p>Scan mo yung Qr ma'am </p>
+            <div class="gallery">
+                <!-- Frames for Gift Pictures -->
+                <div class="gallery-frame" onclick="expandGallery(this, 'Qr')">
+                    <img src="qr.jpeg" alt="Printer">
+                </div>
+           </div>            
+        </div>
+        
+ <p class="message">Mahal ka po namin ma'am! Thank you for being an incredible teacher! Have a wonderful journey 💙</p>
+        
+        
+        <div id="expanded-qr-gallery" class="expanded-gallery" onclick="closeGallery('Qr')">
+                <span class="close">&times;</span>
+                <div class="expanded-content">
+                    <!-- Additional Images for the Expanded Gift View -->
+                    <img src="qr.jpeg" alt="Expanded Printer">
+      
+                </div>
+            </div>
+        </div>
+        
+        
+</div>
+
+
+    
         <p class="message">Mahal ka po namin ma'am! Thank you for being an incredible teacher! Have a wonderful journey 💙</p>
     </div>
 
@@ -190,6 +219,18 @@
         // Function to close the gallery
         function closeGallery(type) {
             const expandedGallery = type === 'gift' ? document.getElementById('expanded-gift-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "none";
+        }
+
+        // Function to expand the gallery
+        function expandGallery(element, type) {
+            const expandedGallery = type === 'Qr' ? document.getElementById('expanded-qr-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "flex";
+        }
+
+        // Function to close the gallery
+        function closeGallery(type) {
+            const expandedGallery = type === 'Qr' ? document.getElementById('expanded-qr-gallery') : document.getElementById('expanded-gallery');
             expandedGallery.style.display = "none";
         }
 
